@@ -24,6 +24,11 @@
 - 0554
 - 0593
 
+要素の位置を知りたい場合は find_index
+# 最初の3の倍数の位置を探す
+[1, 5, 8, 2, 6, 3].find_index { |n| n % 3 == 0 }
+# => 4
+
 # 配列の初期化
 array1 = ["Red", "Red", "Red"]
 array2 = Array.new(3, "Red")
