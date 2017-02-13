@@ -14,6 +14,45 @@
 --------------------------------------------------------------------------------
 - 02/12
 - 0577
+
+irb
+.sample(5)
+
+５分割
+[(1..75)]each_slice(15).to_a.map{|numbers| numbers.sample)(5)}
+
+縦分割
+.each{|row| puts row.inspect}
+
+たてよこひっくり返す
+.transpose
+
+| 何回も書くのはダサい
+'BINGO'.chars.join(' | ')
+
+右寄せ
+ 'BINGO'.chars.map { |s| ' '+ s }.join(' | ')
+rjust
+
+改行
+.join("\n")
+
+どんなのがあるかなー
+Array.ancestors
+
+- product
+dish1 = ["チキン", "ポーク", "マトン"]
+dish2 = ["パン", "ライス"]
+drink = ["コーヒー", "紅茶"]
+sets = dish1.product(dish2, drink).collect {|set| set.join("+") }
+puts sets
+
+- zip
+arr1 = [1, 2, 3]
+arr2 = [4, 5]
+arr3 = [6, 7, 8, 9]
+p arr1.zip(arr2, arr3)
+
 --------------------------------------------------------------------------------
 - 02/11
 - 0583
