@@ -15,6 +15,28 @@
 - 02/12
 - 0577
 
+n = 3
+[1, 2, 3, 4, 5].each_cons(n) do |a, b, c|
+  puts "#{a}, #{b}, #{c}"
+end
+# >> 1, 2, 3
+# >> 2, 3, 4
+# >> 3, 4, 5
+一方 each_slice(n) は n 個の要素を n ずつずらしながら取得する。
+
+n = 3
+[1, 2, 3, 4, 5, 6, 7, 8].each_slice(n) do |a, b, c|
+  puts "#{a}, #{b}, #{c}"
+end
+# >> 1, 2, 3
+# >> 4, 5, 6
+# >> 7, 8,
+
+
+animals = ["mouse", "cat", "hippopotamus", "giraffe"]
+puts animals.max_by {|anim| anim.size }
+hippopotamus
+
 irb
 .sample(5)
 
