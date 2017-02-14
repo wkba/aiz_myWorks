@@ -12,8 +12,9 @@
 - 02/14
 - 0555
 
-
-
+s = "Supercalifragilisticexpialidocious"
+puts s.include?("exp")
+true
 
 
 --------------------------------------------------------------------------------
