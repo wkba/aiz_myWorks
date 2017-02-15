@@ -11,11 +11,19 @@
 --------------------------------------------------------------------------------
 - 02/14
 - 0555
+- 0533
+
+def score
+  return 10.times.map{ gets.to_i }.sort.last(3).inject(:+)
+end
+ 
+puts "#{score} #{score}"
 
 s = "Supercalifragilisticexpialidocious"
 puts s.include?("exp")
 true
 
+w.sort.reverse[0..2].inject(:+)
 
 --------------------------------------------------------------------------------
 - 02/12
