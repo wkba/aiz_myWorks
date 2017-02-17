@@ -1,23 +1,20 @@
-total = 0
-for i in 1..5 do
-  num = gets.to_i
-  if num < 40
-  	total += 40
-  else
-  	total += num
-  end
+def taxed_price(price, tax)
+  return  price * (100 + tax) / 100
 end
-p total / 5
 
-# p $<.map(&:to_i).map{|i|i<40?40:i}.inject(:+)/5
+while (line = gets)
+  x,y,pre_total_price = line.split.map(&:to_i)
+  break if x == 0 && y == 0 && pre_total_price == 0
+  ans = 0
 
-# s=0;
-# 5.times do
-#   s+=[gets.to_i,40].max
-# end
-# p s/5
+  1.upto(pre_total_price-1) do |i|
+    x_price =
 
-# p 5.times.map{
-# 	n=gets.to_i;
-# 	n=n<40?40:n
-# }.inject(:+)/5
+    y_price = total_price-x_price
+
+
+    tax_total_price = taxed_price(x_price, x) + taxed_price(y_price, y)
+    ans = tax_total_price if tax_total_price > ans
+  end
+  p ans
+end
